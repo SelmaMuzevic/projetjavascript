@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse project</title>
+    <style>
+        img {
+            width: 150px;
+            height: 50px;
+            position: absolute;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="chien.jpg" alt="chien qui dors" style="width:150px; height:150px;" />
+    <script type="text/javascript">
+        let img = document.querySelector("#image");
+        document.body.addEventListener("mousemove", function(event) {
+
+            let x = event.clientX;
+            let y = event.clientY;
+            console.log(x + " " + y);
+            img.style.left = x + "px";
+            img.style.top = y + "px";
+        });
+    </script>
+
+</body>
+
+</html>
